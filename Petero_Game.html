@@ -1,40 +1,43 @@
 <!doctype html>
 <html>
-<!-- Peter Ohanesian>
+<!--Peter Ohanesian-->
 <head>
 	<title> Marist Eats </title>
-	<meta charset=utf-8"/>
-	
-<script type="text/javascript>
+	<meta charset="utf-8"/>
+	<script type="text/javascript">
+    	var points=0;
 //north button
 		function btnNorth() {
 			  document.getElementById("message").value = "You are on a budgit so you decide to eat at the Marist cafeteria.";
+ 			  increasePoints();
 			  }
 //South		  
 		function btnSouth()  {
 				document.getElementById("message").value = "You decide to treat yourself to a fine meal and Down the River to Shadows.";
+                increasePoints();
 				}
 //East			
 		function btnEast() {
 				document.getElementById("message").value = "On your way back from a great night out and you're craving pizza, time to go to Gia's!";
+                increasePoints();
 				}
 //West
 		function btnWest() {
 				document.getElementById("message").value = "You're craving an authentic Italian sandwich, so you head on over to Rossi's!";
-				}
-// SCORE, will increase 5 points for every click reaching maximum of 20 points
-		var score = 0;
-		function Points() {
-				score += 5;
-document.getElementById("gameScore").innerHTML = score;	
-		}
+                increasePoints();
+         }
+         function increasePoints(){
+              if(points < 20)
+         	     points+=5;
+              document.getElementById("scorebox").value = "Score: " + points;
+         }
 </script>
 </head>
-<style>
+<!--style>
 		.footer {
 		color: blue;
 		font-weight: bold;
-	 }	
+	 }	-->
 <body>
 		<h1>Marist Eats</h1>
 		<h2> 
@@ -43,10 +46,11 @@ document.getElementById("gameScore").innerHTML = score;
 		<textarea rows="20" cols="50" id="message" name="message">You are at Marist College and decide you want to go get some food! Where will you go?!
 		</textarea>
 <br/>
-		<input type="button" value="North" onclick="btnNorth_click();this.onclick=null" id="btnNorth"/><br/><br/>
-		<input type="button" value="South" onclick="btnSouth_click();this.onclick=null" id="btnSouth"/><br/><br/>
-		<input type="button" value="East" onclick="btnEast_click();this.onclick=null" id="btnEast"/><br/><br/>
-		<input type="button" value="West" onclick="btnWest_click();this.onclick=null" id="btnWest"/><br/><br/>
+		<input type="button" value="North" onclick="btnNorth();this.onclick=null" id="btnNorth"/><br/><br/>
+		<input type="button" value="South" onclick="btnSouth();this.onclick=null" id="btnSouth"/><br/><br/>
+		<input type="button" value="East" onclick="btnEast();this.onclick=null" id="btnEast"/><br/><br/>
+		<input type="button" value="West" onclick="btnWest();this.onclick=null" id="btnWest"/><br/><br/>
+<textarea rows="2" cols="10" id="scorebox" name="scorebox">Score </textarea>
 <em>Score:</em> <a id="gameScore">0</a> points	
 </body>
 	
