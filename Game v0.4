@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<!--Peter Ohanesian-->
+<head>
+	<title> Marist Eats </title>
+	<meta charset="utf-8"/>
+	<script type="text/javascript">
+    	var points=0;
+//north button
+		function btnNorth() {
+			  document.getElementById("message").value = "You are on a budgit so you decide to eat at the Marist cafeteria.";
+ 			  increasePoints();
+			  }
+//South		  
+		function btnSouth()  {
+				document.getElementById("message").value = "You decide to treat yourself to a fine meal and Down the River to Shadows.";
+                increasePoints();
+				}
+//East			
+		function btnEast() {
+				document.getElementById("message").value = "On your way back from a great night out and you're craving pizza, time to go to Gia's!";
+                increasePoints();
+				}
+//West
+		function btnWest() {
+				document.getElementById("message").value = "You're craving an authentic Italian sandwich, so you head on over to Rossi's!";
+                increasePoints();
+                }
+//NorthEast    
+        function btnNorthEast() {
+      			document.getElementById("message").value = "You're still on a budget but you're sick of cafe food!  It's time to go to McDonalds!";
+                increasePoints();
+         		}
+//SouthWest
+		 function btnSouthWest() {
+      			document.getElementById("message").value = "You have so much Thrifty cash to spend! Head on over to the Cabaret!";
+                increasePoints();
+                }
+         function increasePoints(){
+              if(points < 30)
+         	     points+=5;
+              document.getElementById("scorebox").value = "Score: " + points;
+         }
+</script>
+</head>
+<!--style>
+		.footer {
+		color: blue;
+		font-weight: bold;
+	 }	-->
+<body>
+		<h1>Marist Eats</h1>
+		<h2> 
+		Have questions about where to eat? email <a her = "mailto:pjohanesian@gmail.com">
+		</h2>
+		<textarea rows="20" cols="50" id="message" name="message">You are at Marist College and decide you want to go get some food! Where will you go?!
+		</textarea>
+<br/>
+		<input type="button" value="North" onclick="btnNorth();this.onclick=null" id="btnNorth"/><br/><br/>
+		<input type="button" value="South" onclick="btnSouth();this.onclick=null" id="btnSouth"/><br/><br/>
+		<input type="button" value="East" onclick="btnEast();this.onclick=null" id="btnEast"/><br/><br/>
+		<input type="button" value="West" onclick="btnWest();this.onclick=null" id="btnWest"/><br/><br/>
+		<input type="button" value= "NorthEast" 
+onclick="btnNorthEast();this.onclick=null" id="btnWest"/><br/><br/>
+		<input type="button" value= "SouthWest" 
+onclick="btnSouthWest();this.onclick=null" id="btnWest"/><br/><br/>
+<textarea rows="2" cols="10" id="scorebox" name="scorebox">Score </textarea>
+<em>Score:</em> <a id="gameScore">0</a> points	
+</body>
+	
+</html>
