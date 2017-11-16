@@ -1,0 +1,94 @@
+       //Varibles are global
+    		var points=0;
+            var currentLoc=0;
+            //Varibles will effect score
+            var VisitedLoc0=false;
+            var VisitedLoc1= false;
+            var VisitedLoc2= false;
+            var VisitedLoc3= false;
+            var VisitedLoc4= false;
+            var VisitedLoc5= false;
+            var VisitedLoc6= false;
+            var VisitedLoc7= false;
+            var VisitedLoc8= false;
+            var VisitedLoc9= false;
+       
+            //initi look
+            function init() {
+                look();
+            }
+            function btnenter_click() {
+                var userText = document.getElementById("txtCommand").value;
+                var response = "";
+                if (userText === "N") {
+                    response = btnNorth()
+                } else {
+                if (userText === "S") {
+                    response = btnSouth()
+                } else {
+                if (userText === "E") {
+                    response = btnEast()
+                } else {
+                if (userText === "W") {
+                    response = btnWest()
+                } else {
+                if (userText === "n") {
+                    response = btnNorth()
+                } else {
+                if (userText === "s") {
+                    response = btnNorth()
+                } else {
+                if (userText === "e") {
+                    response = btnNorth()
+                } else {
+                if (userText === "w") {
+                    response = btnNorth()
+                } else {
+                    alert("Valid commands are N,S,E,W,,n,s,e,w");
+                }
+                }
+                }
+                }
+                }
+                }
+                }
+                }
+            }
+			//north button
+			function btnNorth() {
+			  document.getElementById("message").value = "You are on a budgit so you decide to eat at the Marist cafeteria.";
+    
+ 			  increasePoints();
+			  }
+			//South		  
+			function btnSouth()  {
+				document.getElementById("message").value = "You decide to treat yourself to a fine meal and Down the River to Shadows.";
+        
+                increasePoints();
+				}
+			//East			
+			function btnEast() {
+				document.getElementById("message").value = "On your way back from a great night out and you're craving pizza, time to go to Gia's!";
+        
+                increasePoints();
+				}
+			//West
+			function btnWest() {
+				document.getElementById("message").value = "You're craving an authentic Italian sandwich, so you head on over to Rossi's!";
+                increasePoints();
+                }
+			//NorthEast    
+        	function btnNorthEast() {
+      			document.getElementById("message").value = "You're still on a budget but you're sick of cafe food!  It's time to go to McDonalds!";
+                increasePoints();
+         		}
+			//SouthWest
+		 	function btnSouthWest() {
+      			document.getElementById("message").value = "You have so much Thrifty cash to spend! Head on over to the Cabaret!";
+                increasePoints();
+                }
+         	function increasePoints(){
+              if(points < 30)
+         	     points+=5;
+              document.getElementById("scorebox").value = "Score: " + points;
+         }
