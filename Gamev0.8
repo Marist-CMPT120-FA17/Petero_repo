@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html>
+<!--Peter Ohanesian-->
+<!--This project contains html, Javascript, and css-->
+
+	<head>
+		<title> Marist Eats</title> 
+        <style type=text/css>
+        h1 { color: red; font-size: 38pt;} h2 { color: blue; font-size: 20pt;}
+        body { text-align: center;
+				  width: 50%;
+				  position: relative;
+				  left: 25%;
+				   }
+	</style>
+			<meta charset="utf-8"/>
+			<script type="text/javascript">
+            
+		</script>
+        <style>
+            .footer {
+                color: black;
+                font-weight: bold;
+            }
+        </style>
+	</head>
+
+<body>
+		<h1>Marist Eats</h1>
+        <h2> Game by Peter Ohanesian</h2>
+		
+		<textarea rows="10" cols="40" id="message" name="message">You are at Marist College and decide you want to go get some food! Where will you go?!
+		</textarea>
+<br/>
+		<input type="button" value="North" onclick="btnNorth();this.onclick=null" id="btnNorth"/><br/><br/>
+		<input type="button" value="South" onclick="btnSouth();this.onclick=null" id="btnSouth"/><br/><br/>
+		<input type="button" value="East" onclick="btnEast();this.onclick=null" id="btnEast"/><br/><br/>
+		<input type="button" value="West" onclick="btnWest();this.onclick=null" id="btnWest"/><br/><br/>
+<textarea rows="2" cols="10" id="scorebox" name="scorebox">Score </textarea>
+<em>Score:</em> <a id="gameScore">0</a> points	
+ <input type="text" id="txtCommand" name="txtCommand">
+    <input type="button" id="UserEnter" value="enter" onclick="btnenter_click();" />
+<p class="footer">
+		Have questions about where to eat? email  <a href = "mailto:pjohanesian@gmail.com"> Peter Ohanesian </a>
+        </p>
+</body>
+	
+</html>
